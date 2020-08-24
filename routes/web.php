@@ -8,12 +8,19 @@ use Illuminate\Support\Facades\Route;
 
 // Home Route
 Route::get('/', 'HomeController@index');
+Route::get('/login', 'AdminController@login');
+Route::get('/register', 'AdminController@register');
+
+
+// Post Route 
+Route::prefix('/post')->group(function () {
+    Route::post('/store', 'PostController@store');
+    // Route::get('/create', 'AdminController@create');
+});
 
 
 // Admin / User Route 
 Route::prefix('/administrator')->group(function () {
     Route::get('/', 'AdminController@index');
-    Route::get('/login', 'AdminController@login');
-    Route::get('/register', 'AdminController@register');
     Route::get('/create', 'AdminController@create');
 });
