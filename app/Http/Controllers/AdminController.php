@@ -4,82 +4,115 @@ namespace App\Http\Controllers;
 
 use App\Login;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('admin.index');
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
+        $users = session('data_login');
+        return view('admin.index', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.createpost');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Login  $login
-     * @return \Illuminate\Http\Response
-     */
     public function show(Login $login)
     {
         return view('admin.daftarpost');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Login  $login
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Login $login)
     {
         return view('admin.editpost');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Login  $login
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Login $login)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Login  $login
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Login $login)
     {
         //
+    }
+
+    public function logout(Request $request)
+    {
+        $request->session()->flush();
+        return redirect('/login');
+    }
+
+    public function login()
+    {
+        if (session('data_login')) {
+            return redirect('/administrator');
+        }
+        return view('/login');
+    }
+
+    public function postlogin(Request $request)
+    {
+        $data_login = Login::where('username', $request->username)->firstOrFail();
+        $cek_password = Hash::check($request->password, $data_login->password);
+
+        if ($data_login) {
+            if ($cek_password) {
+                if ($data_login->level == 1) {
+                    session(['data_login' => $data_login]);
+                    return redirect('/administrator');
+                }
+            }
+        }
+        return redirect('/login')->with('status_fail', 'Login gagal, username atau password salah')->withInput();
+    }
+
+    public function register()
+    {
+        return view('register');
+    }
+
+    public function postregister(Request $request)
+    {
+        $login_data = new Login;
+
+        $validatedLogin = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        $hashPassword = Hash::make($request->password, [
+            'rounds' => 12,
+        ]);
+
+        $token = Str::random(16);
+
+        $level = 2;
+
+        $login_data = Login::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'username' => $request->username,
+            'password' => $hashPassword,
+            'token' => $token,
+            'level' => $level
+        ]);
+
+        $login_data->save();
+
+        return redirect('/login')->with('berhasil_register', 'Berhasil melakukan registrasi');
     }
 }

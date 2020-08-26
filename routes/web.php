@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\Route;
 // Home Route
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'AdminController@login');
+Route::post('/login', 'AdminController@postlogin');
 Route::get('/register', 'AdminController@register');
+Route::post('/register', 'AdminController@postregister');
 
 
 // Post Route 
@@ -23,4 +25,5 @@ Route::prefix('/post')->group(function () {
 Route::prefix('/administrator')->group(function () {
     Route::get('/', 'AdminController@index');
     Route::get('/create', 'AdminController@create');
+    Route::post('/logout', 'AdminController@logout');
 });

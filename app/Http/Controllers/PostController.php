@@ -37,15 +37,18 @@ class PostController extends Controller
     {
         $posts = new Article;
 
-        $posts = Article::create([
-            'post_judul'    => $request->post_judul,
-            'post_isi'      => $request->post_isi,
-            'post_slug'     => $request->post_slug
+        $validatedData = $request->validate([
+            'post_judul' => 'required',
+            'post_isi' => 'required',
+            'post_slug' => 'required'
         ]);
+        // dd($validatedData);
+
+        $posts = Article::create($validatedData);
 
         $posts->save();
 
-        return redirect('/administrator/create');
+        return redirect('/administrator/create')->with('berhasil_post', 'Post berhasil di Posting!');
     }
 
     /**
