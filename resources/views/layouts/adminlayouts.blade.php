@@ -66,7 +66,7 @@
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div>
+                            <div class="d-sm-none d-lg-inline-block">Hi, {{ $users->name }}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">Logged in 5 min ago</div>
@@ -90,6 +90,7 @@
                     </li>
                 </ul>
             </nav>
+
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
@@ -106,7 +107,7 @@
                                     class="fas fa-fire"></i><span>Dashboard</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="index-0.html">User</a></li>
-                                <li><a class="nav-link" href="index.html">Ubah Data</a></li>
+                                <li><a class="nav-link" href="{{ route('create') }}">Ubah Data</a></li>
                             </ul>
                         </li>
 

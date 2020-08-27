@@ -14,10 +14,13 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->id('post_id');
+            $table->id();
             $table->string('post_judul', 500);
             $table->text('post_isi');
             $table->string('post_slug');
+            $table->string('kategori');
+            $table->unsignedBigInteger('login_id');
+            $table->foreign('login_id')->references('id')->on('logins');
             $table->timestamps();
         });
     }

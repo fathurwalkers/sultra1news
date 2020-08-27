@@ -17,13 +17,16 @@ Route::post('/register', 'AdminController@postregister');
 // Post Route 
 Route::prefix('/post')->group(function () {
     Route::post('/store', 'PostController@store');
-    // Route::get('/create', 'AdminController@create');
+    Route::get('/edit/{article}', 'PostController@edit');
+    Route::post('/update/{article}', 'PostController@update');
 });
 
 
 // Admin / User Route 
 Route::prefix('/administrator')->group(function () {
     Route::get('/', 'AdminController@index');
-    Route::get('/create', 'AdminController@create');
+    Route::get('/create', 'AdminController@create')->name('create');
     Route::post('/logout', 'AdminController@logout');
+    // Route::get('/edit/{article}', 'PostController@edit');
+    Route::post('/delete', 'PostController@destroy')->name('deletepost');
 });

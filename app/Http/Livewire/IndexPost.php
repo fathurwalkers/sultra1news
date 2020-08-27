@@ -8,9 +8,16 @@ use Livewire\Component;
 
 class IndexPost extends Component
 {
+    public $status_page = 1;
+
     public function render()
     {
-        $data = Article::latest()->get();
-        return view('livewire.index-post', ['data' => $data]);
+        return view('livewire.index-post');
+    }
+
+    public function getCreate()
+    {
+        $status_page = 2;
+        $this->emit('CreatePost');
     }
 }

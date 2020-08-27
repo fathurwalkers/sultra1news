@@ -3,94 +3,79 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Login;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $posts = new Article;
 
         $validatedData = $request->validate([
             'post_judul' => 'required',
             'post_isi' => 'required',
-            'post_slug' => 'required'
+            'post_slug' => 'required',
+            'kategori' => 'required'
         ]);
-        // dd($validatedData);
 
-        $posts = Article::create($validatedData);
+        $kategori = implode(", ", $request->kategori);
+        $user_sesi = session('data_login');
+        $posts = new Article;
+        $posts = Article::create([
+            'post_judul' => $request->post_judul,
+            'post_isi' => $request->post_isi,
+            'post_slug' => $request->post_slug,
+            'kategori' => $kategori,
+            'login_id' => $user_sesi->id
+        ]);
+
+        // dd($user_sesi);
 
         $posts->save();
 
         return redirect('/administrator/create')->with('berhasil_post', 'Post berhasil di Posting!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function show(Article $article)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Article $article)
     {
-        //
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
+        $users = session('data_login');
+        return view('admin.editpost', [
+            'article' => $article,
+            'users' => $users
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Article $article)
     {
-        //
+        $user_sesi = session('data_login');
+        $posts = Article::where('id', $article->id)->first()->update([
+            'post_judul' => $request->post_judul,
+            'post_isi' => $request->post_isi,
+            'post_slug' => $request->post_slug,
+            'kategori' => $article->kategori,
+            'login_id' => $article->login_id
+        ]);
+        return redirect('/administrator')->with('berhasil_post', 'Post berhasil di Posting!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Article  $article
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Article $article)
     {
         //

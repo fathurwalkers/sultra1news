@@ -16,4 +16,9 @@ class Login extends Model
         'token',
         'level'
     ];
+
+    public function article()
+    {
+        return $this->hasMany('App\Article');
+    }
 }

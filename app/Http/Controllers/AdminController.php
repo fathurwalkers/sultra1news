@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Login;
+use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -33,9 +34,9 @@ class AdminController extends Controller
         return view('admin.daftarpost');
     }
 
-    public function edit(Login $login)
+    public function edit(Article $article)
     {
-        return view('admin.editpost');
+        //
     }
 
     public function update(Request $request, Login $login)
@@ -71,7 +72,7 @@ class AdminController extends Controller
             if ($cek_password) {
                 if ($data_login->level == 1) {
                     session(['data_login' => $data_login]);
-                    return redirect('/administrator');
+                    return view('admin.index');
                 }
             }
         }

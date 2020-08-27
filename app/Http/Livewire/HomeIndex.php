@@ -3,11 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Article;
 
 class HomeIndex extends Component
 {
     public function render()
     {
-        return view('livewire.home-index');
+        $data = Article::latest()->get();
+        return view('livewire.home-index', ['data' => $data]);
     }
 }

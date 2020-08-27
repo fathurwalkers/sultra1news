@@ -36,6 +36,49 @@
                     <label for="slug">Slug Berita : </label>
                     <input type="slug" name="post_slug" class="form-control" id="slug" aria-describedby="slugHelp">
                 </div>
+
+                <div class="form-group">
+                    <div class="card m-b-30">
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="nasional"
+                                value="nasional">
+                            <label class="form-check-label" for="nasional">Nasional</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="internasional"
+                                value="internasional">
+                            <label class="form-check-label" for="internasional">Internasional</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="sultra"
+                                value="sultra">
+                            <label class="form-check-label" for="sultra">Sultra</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="kendari"
+                                value="kendari">
+                            <label class="form-check-label" for="kendari">Kendari</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="baubau"
+                                value="baubau">
+                            <label class="form-check-label" for="baubau">Baubau</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="kategori[]" type="checkbox" id="terbaru"
+                                value="terbaru">
+                            <label class="form-check-label" for="terbaru">Terbaru</label>
+                        </div>
+
+                    </div>
+                </div>
+
                 <textarea class="" name="post_isi"></textarea>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
