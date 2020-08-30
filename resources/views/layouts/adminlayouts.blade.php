@@ -108,6 +108,9 @@
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="index-0.html">User</a></li>
                             </ul>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="{{ route('media') }}">Media</a></li>
+                            </ul>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -179,6 +182,7 @@
     <!-- Template JS File -->
     <script src="{{ asset('assets/stisla/js/scripts.js') }}"></script>
     <script src="{{ asset('assets/stisla/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/stisla/choco.js') }}"></script>
 
     @stack('after-script')
 

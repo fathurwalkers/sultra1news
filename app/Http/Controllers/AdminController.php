@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Login;
 use App\Article;
+use App\Gambar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -116,5 +117,15 @@ class AdminController extends Controller
         $login_data->save();
 
         return redirect('/login')->with('berhasil_register', 'Berhasil melakukan registrasi');
+    }
+
+    public function media()
+    {
+        $users = session('data_login');
+        $gambars = Gambar::latest()->get();
+        return view('admin.media', [
+            'gambars' => $gambars,
+            'users' => $users
+        ]);
     }
 }

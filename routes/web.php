@@ -13,7 +13,7 @@ Route::post('/login', 'AdminController@postlogin');
 Route::get('/register', 'AdminController@register');
 Route::post('/register', 'AdminController@postregister');
 
-// Post Route 
+// Post Route
 Route::prefix('/post')->group(function () {
     Route::post('/store', 'PostController@store');
     Route::get('/edit/{article}', 'PostController@edit');
@@ -21,11 +21,12 @@ Route::prefix('/post')->group(function () {
 });
 
 
-// Admin / User Route 
+// Admin / User Route
 Route::prefix('/administrator')->group(function () {
     Route::get('/', 'AdminController@index')->name('allpost');
     Route::get('/create', 'AdminController@create')->name('create');
     Route::post('/logout', 'AdminController@logout');
     // Route::get('/edit/{article}', 'PostController@edit');
     Route::post('/delete', 'PostController@destroy')->name('deletepost');
+    Route::get('/media', 'AdminController@media')->name('media');
 });
