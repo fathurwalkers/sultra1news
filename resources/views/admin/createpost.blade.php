@@ -25,7 +25,7 @@
                 {{ session('berhasil_post') }}
             </div>
             @endif
-            <form action="{{ url('/post/store') }}" method="post">
+            <form action="{{ url('/post/store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="judul">Judul Berita : </label>
@@ -42,37 +42,37 @@
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="nasional"
-                                value="nasional">
+                                value="Nasional">
                             <label class="form-check-label" for="nasional">Nasional</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="internasional"
-                                value="internasional">
+                                value="Internasional">
                             <label class="form-check-label" for="internasional">Internasional</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="sultra"
-                                value="sultra">
+                                value="Sultra">
                             <label class="form-check-label" for="sultra">Sultra</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="kendari"
-                                value="kendari">
+                                value="Kendari">
                             <label class="form-check-label" for="kendari">Kendari</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="baubau"
-                                value="baubau">
+                                value="Baubau">
                             <label class="form-check-label" for="baubau">Baubau</label>
                         </div>
 
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="terbaru"
-                                value="terbaru">
+                                value="Terbaru">
                             <label class="form-check-label" for="terbaru">Terbaru</label>
                         </div>
 
@@ -80,10 +80,18 @@
                 </div>
 
                 <textarea class="" name="post_isi"></textarea>
+                <div class="card mt-3 mb-3">
+                    <div class="card-header">
+                        <h4>Upload Gambar</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="dz-default dz-message">
+                            <input type="file" name="gambar">
+                        </div>
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-
-
         </div>
     </section>
 </div>

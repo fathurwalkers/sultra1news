@@ -9,6 +9,7 @@
                                 <th>#</th>
                                 <th>Judul Post</th>
                                 <th>Slug</th>
+                                <th>Gambar</th>
                                 <th>Author</th>
                                 <th>Created At</th>
                                 <th>Action</th>
@@ -18,6 +19,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->post_judul }}</td>
                                 <td>{{ $item->post_slug }}</td>
+                                <td><img src="{{ asset($item->gambar) }}" width="250px" height="150px"></td>
                                 <td>{{ $item->login->name }}</td>
                                 <td>{{ $item->created_at }}</td>
                                 <td>

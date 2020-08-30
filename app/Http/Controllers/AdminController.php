@@ -16,12 +16,13 @@ class AdminController extends Controller
             return redirect('/login');
         }
         $users = session('data_login');
-        return view('admin.index', compact('users'));
+        return view('admin.index', ['users' => $users]);
     }
 
     public function create()
     {
-        return view('admin.createpost');
+        $users = session('data_login');
+        return view('admin.createpost', ['users' => $users]);
     }
 
     public function store(Request $request)
@@ -71,8 +72,8 @@ class AdminController extends Controller
         if ($data_login) {
             if ($cek_password) {
                 if ($data_login->level == 1) {
-                    session(['data_login' => $data_login]);
-                    return view('admin.index');
+                    $users = session(['data_login' => $data_login]);
+                    return redirect('/administrator');
                 }
             }
         }
@@ -101,7 +102,7 @@ class AdminController extends Controller
 
         $token = Str::random(16);
 
-        $level = 2;
+        $level = 1;
 
         $login_data = Login::create([
             'name' => $request->name,

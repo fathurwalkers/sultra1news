@@ -18,9 +18,11 @@ class CreateArticlesTable extends Migration
             $table->string('post_judul', 500);
             $table->text('post_isi');
             $table->string('post_slug');
-            $table->string('kategori');
+            // $table->unsignedBigInteger('kategori_id');
+            // $table->foreign('kategori_id')->references('id')->on('kategoris');
             $table->unsignedBigInteger('login_id');
             $table->foreign('login_id')->references('id')->on('logins');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
