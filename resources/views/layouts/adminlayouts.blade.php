@@ -107,15 +107,14 @@
                                     class="fas fa-fire"></i><span>Dashboard</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="index-0.html">User</a></li>
-                                <li><a class="nav-link" href="{{ route('create') }}">Ubah Data</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Posts</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">Semua Postingan</a></li>
-                                <li><a class="nav-link" href="{{ url('/administrator/create') }}">Tambah Post</a></li>
+                                <li><a class="nav-link" href="{{ route('allpost') }}">Semua Postingan</a></li>
+                                <li><a class="nav-link" href="{{ route('create') }}">Tambah Post</a></li>
                             </ul>
                         </li>
 
