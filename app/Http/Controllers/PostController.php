@@ -84,8 +84,6 @@ class PostController extends Controller
 
     public function update(Request $request, Article $article)
     {
-        // $cek_gambar = $request->file('gambar');
-        // $user_sesi = session('data_login');
         $posts = Article::where('id', $article->id)->first()->update([
             'post_judul' => $request->post_judul,
             'post_isi' => $request->post_isi,
