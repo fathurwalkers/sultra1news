@@ -72,6 +72,7 @@ class PostController extends Controller
 
     public function edit(Article $article)
     {
+        // EDIT DATA
         if (!session('data_login')) {
             return redirect('/login');
         }
