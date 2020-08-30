@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{ asset('assets/stisla/css/components.css') }}">
 </head>
 
-<body>
+<body class="bg-dark">
   <div id="app">
     <section class="section">
       <div class="container mt-5">
