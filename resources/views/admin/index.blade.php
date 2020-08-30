@@ -12,7 +12,6 @@
 @endpush
 
 @section('main-content')
-{{-- <livewire:create-post></livewire:create-post> --}}
 <livewire:index-post></livewire:index-post>
 @endsection
 
