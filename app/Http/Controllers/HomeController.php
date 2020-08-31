@@ -40,11 +40,6 @@ class HomeController extends Controller
         return view('show', ['articles' => $articles]);
     }
 
-    // public function edit($id)
-    // {
-    //     //
-    // }
-
     public function update(Request $request, $id)
     {
         //

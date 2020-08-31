@@ -172,8 +172,9 @@
                                             </div>
                                             <div class="trend-bottom-cap">
                                                 <span class="color3">BERITA PILIHAN</span>
-                                                <h4><a
-                                                        href="{{ url('show/'.$article33->id.'') }}">{{ $article33->post_judul }}</a>
+                                                <h4>
+                                                    <a href="{{ url('show/'.$article33->id.'') }}">{{ $article33->post_judul }}
+                                                    </a>
                                                 </h4>
                                             </div>
                                         </div>

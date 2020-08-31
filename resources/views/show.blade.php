@@ -72,7 +72,8 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
@@ -89,7 +90,8 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                 <div class="sticky-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
@@ -146,7 +148,8 @@
 
                         <div class="single-post">
                             <div class="feature-img">
-                                <img class="img-fluid" src="{{ asset($articles->gambar) }}" alt="">
+                                <img class="img-fluid" src="{{ asset($articles->gambar) }}" alt="" width="750"
+                                    height="375">
                             </div>
                             <div class="blog_details">
                                 <h2>
@@ -557,7 +560,8 @@
                             <div class="single-footer-caption">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

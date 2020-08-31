@@ -16,21 +16,23 @@
                                 <th>Action</th>
                             </tr>
                             @foreach ($data as $item)
-                            <tr class="text-center">
+                            <tr class="">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $item->post_judul }}</td>
                                 <td>{{ $item->post_slug }}</td>
-                                <td><img src="{{ asset($item->gambar) }}" width="250px" height="150px"></td>
+                                <td><img src="{{ asset($item->gambar) }}" width="150px" height="100px"></td>
                                 <td>{{ $item->login->name }}</td>
                                 <td>{{ $item->created_at }}</td>
 
-                                @foreach ($item->kategoris as $cat)
-                                <td>
-                                    <p class="badge-info">
-                                        {{ $cat->kategori_nama }}
-                                    </p>
+                                <td class="text-center">
+                                    <div class="">
+                                        @foreach ($item->kategoris as $cat)
+                                        <p class="badge-info">
+                                            {{ $cat->kategori_nama }}
+                                        </p>
+                                        @endforeach
+                                    </div>
                                 </td>
-                                @endforeach
 
                                 <td>
                                     <div class="d-inline-flex">
