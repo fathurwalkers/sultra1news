@@ -40,41 +40,13 @@
                 <div class="form-group">
                     <div class="card m-b-30">
 
+                        @foreach ($kategorilist as $kategori)
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" name="kategori[]" type="checkbox" id="nasional"
-                                value="Nasional">
-                            <label class="form-check-label" for="nasional">Nasional</label>
+                                value="{{ $kategori->id }}">
+                            <label class="form-check-label" for="nasional">{{ $kategori->kategori_nama }}</label>
                         </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" name="kategori[]" type="checkbox" id="internasional"
-                                value="Internasional">
-                            <label class="form-check-label" for="internasional">Internasional</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" name="kategori[]" type="checkbox" id="sultra"
-                                value="Sultra">
-                            <label class="form-check-label" for="sultra">Sultra</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" name="kategori[]" type="checkbox" id="kendari"
-                                value="Kendari">
-                            <label class="form-check-label" for="kendari">Kendari</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" name="kategori[]" type="checkbox" id="baubau"
-                                value="Baubau">
-                            <label class="form-check-label" for="baubau">Baubau</label>
-                        </div>
-
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" name="kategori[]" type="checkbox" id="terbaru"
-                                value="Terbaru">
-                            <label class="form-check-label" for="terbaru">Terbaru</label>
-                        </div>
+                        @endforeach
 
                     </div>
                 </div>

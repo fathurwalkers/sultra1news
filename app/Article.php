@@ -22,7 +22,7 @@ class Article extends Model
 
     public function kategoris()
     {
-        return $this->belongsToMany('App\Kategori')->withTimestamps();
+        return $this->belongsToMany('App\Kategori');
     }
 
     public function comment()

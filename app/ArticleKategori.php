@@ -9,5 +9,5 @@ class ArticleKategori extends Pivot
     // public function articles(){
     //     return $this->hasMany('')
     // }
-    protected $table = 'articles_kategoris';
+    protected $table = 'article_kategori';
 }

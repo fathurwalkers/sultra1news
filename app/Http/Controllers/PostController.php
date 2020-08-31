@@ -35,10 +35,11 @@ class PostController extends Controller
             $gambar = null;
         }
         $gambar = $request->file('gambar')->store('gambar');
-
-        $kategori = implode(", ", $request->kategori);
-        $kategori_reqq = explode(",", $kategori);
-        $kategori_req = json_encode($kategori_reqq);
+        // dd($request->kategori);
+        $kategori_b = $request->kategori;
+        $kategori = implode(", ", $kategori_b);
+        // $kategori_reqq = explode(",", $kategori);
+        // $kategori_req = json_encode($kategori_reqq);
         $user_sesi = session('data_login');
         $posts = new Article;
         $posts = Article::create([
@@ -49,10 +50,12 @@ class PostController extends Controller
             'gambar' => $gambar
         ]);
 
-        $posts->kategoris()->where('kategori_nama', $kategori_req)
-            ->createMany([
-                ['kategori_nama' => $kategori_req]
-            ]);
+        // $posts->kategoris()->where('kategori_nama', $kategori)
+        //     ->createMany([
+        //         ['kategori_nama' => $kategori]
+        //     ]);
+        $posts->kategoris()->attach($kategori_b);
+        // dd($posts);
 
         $gambars = new Gambar;
         $gambars = Gambar::create([

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Login;
 use App\Article;
 use App\Gambar;
+use App\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -23,7 +24,11 @@ class AdminController extends Controller
     public function create()
     {
         $users = session('data_login');
-        return view('admin.createpost', ['users' => $users]);
+        $kategorilist = Kategori::all();
+        return view('admin.createpost', [
+            'users' => $users,
+            'kategorilist' => $kategorilist
+        ]);
     }
 
     public function store(Request $request)

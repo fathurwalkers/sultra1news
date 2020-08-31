@@ -12,6 +12,7 @@
                                 <th>Gambar</th>
                                 <th>Author</th>
                                 <th>Created At</th>
+                                <th>Kategori</th>
                                 <th>Action</th>
                             </tr>
                             @foreach ($data as $item)
@@ -22,6 +23,15 @@
                                 <td><img src="{{ asset($item->gambar) }}" width="250px" height="150px"></td>
                                 <td>{{ $item->login->name }}</td>
                                 <td>{{ $item->created_at }}</td>
+
+                                @foreach ($item->kategoris as $cat)
+                                <td>
+                                    <p class="badge-info">
+                                        {{ $cat->kategori_nama }}
+                                    </p>
+                                </td>
+                                @endforeach
+
                                 <td>
                                     <div class="d-inline-flex">
                                         <form action="{{url('/post/edit')}}/{{$item->id}}" method="get">
