@@ -12,6 +12,7 @@ Route::get('/login', 'AdminController@login');
 Route::post('/login', 'AdminController@postlogin');
 Route::get('/register', 'AdminController@register');
 Route::post('/register', 'AdminController@postregister');
+Route::get('/show/{article}', 'HomeController@show');
 
 // Post Route
 Route::prefix('/post')->group(function () {
