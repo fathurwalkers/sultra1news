@@ -35,7 +35,8 @@ class HomeController extends Controller
 
     public function show(Article $article)
     {
-        return view('show', ['article' => $article]);
+        $articles = Article::find($article)->first();
+        return view('home.show', ['articles' => $articles]);
     }
 
     // public function edit($id)

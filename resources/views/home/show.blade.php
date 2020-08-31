@@ -13,17 +13,30 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/slicknav.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/animate.min.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/themify-icons.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/slick.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/nice-select.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/style.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="assets/css/responsive.css{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/ticker-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/style.css') }}">
 </head>
 
 <body>
