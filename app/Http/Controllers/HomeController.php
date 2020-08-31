@@ -9,7 +9,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('home.index');
+        $articles = Article::latest()->get();
+        $articles_min = Article::latest()->paginate(5);
+        return view('home.index', [
+            'articles' => $articles,
+            'articles_min' => $articles_min
+        ]);
     }
 
     public function create()
