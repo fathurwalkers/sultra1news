@@ -163,46 +163,26 @@
                             <!-- Trending Bottom -->
                             <div class="trending-bottom">
                                 <div class="row">
+
+                                    @foreach ($article3 as $article33)
                                     <div class="col-lg-4">
                                         <div class="single-bottom mb-35">
                                             <div class="trend-bottom-img mb-30">
-                                                <img src="assets/img/trending/trending_bottom1.jpg" alt="">
+                                                <img src="{{ $article33->gambar }}" alt="" width="237" height="158">
                                             </div>
                                             <div class="trend-bottom-cap">
-                                                <span class="color1">Lifestyple</span>
-                                                <h4><a href="details.html">Get the Illusion of Fuller Lashes by
-                                                        “Mascng.”</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="assets/img/trending/trending_bottom2.jpg" alt="">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <span class="color2">Sports</span>
-                                                <h4>
-                                                    <h4><a href="details.html">Get the Illusion of Fuller Lashes by
-                                                            “Mascng.”</a></h4>
+                                                <span class="color3">BERITA PILIHAN</span>
+                                                <h4><a
+                                                        href="{{ url('show/'.$article33->id.'') }}">{{ $article33->post_judul }}</a>
                                                 </h4>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="assets/img/trending/trending_bottom3.jpg" alt="">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <span class="color3">Travels</span>
-                                                <h4><a href="details.html"> Welcome To The Best Model Winner Contest</a>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+
                                 </div>
                             </div>
+
                         </div>
                         <!-- Riht content -->
                         <div class="col-lg-4">
@@ -214,7 +194,9 @@
                                 </div>
                                 <div class="trand-right-cap">
                                     <span class="color3">TERBARU</span>
-                                    <h4><a href="details.html">{{ $article_min->post_judul }}</a></h4>
+                                    <h4><a
+                                            href="{{ url('show/'.$article_min->id.'') }}">{{ $article_min->post_judul }}</a>
+                                    </h4>
                                 </div>
                             </div>
                             @endforeach
@@ -240,42 +222,20 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="weekly-news-active dot-style d-flex dot-style">
+
+                                @foreach ($articles as $article)
                                 <div class="weekly-single">
                                     <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews2.jpg" alt="">
+                                        <img src="{{ asset($article->gambar) }}" alt="" width="370" height="432">
                                     </div>
                                     <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
+                                        <span class="color1">SULTRA1NEWS</span>
+                                        <h4><a href="{{ url('show/'.$article->id.'') }}">{{ $article->post_judul }}</a>
+                                        </h4>
                                     </div>
                                 </div>
-                                <div class="weekly-single active">
-                                    <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews3.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                        <img src="assets/img/news/weeklyNews1.jpg" alt="">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">Strike</span>
-                                        <h4><a href="#">Welcome To The Best Model Winner Contest</a></h4>
-                                    </div>
-                                </div>
+                                @endforeach
+
                             </div>
                         </div>
                     </div>
@@ -297,7 +257,7 @@
                             <div class="col-lg-9 col-md-9">
                                 <div class="properties__button">
                                     <!--Nav Button  -->
-                                    <nav>
+                                    {{-- <nav>
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
                                                 href="#nav-home" role="tab" aria-controls="nav-home"
@@ -318,7 +278,7 @@
                                                 href="#nav-techno" role="tab" aria-controls="nav-contact"
                                                 aria-selected="false">Technology</a>
                                         </div>
-                                    </nav>
+                                    </nav> --}}
                                     <!--End Nav Button  -->
                                 </div>
                             </div>
@@ -332,54 +292,23 @@
                                         aria-labelledby="nav-home-tab">
                                         <div class="whats-news-caption">
                                             <div class="row">
+
+                                                @foreach ($article4 as $article44)
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
                                                         <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
+                                                            <img src="{{ $article44->gambar }}" alt="" width="370"
+                                                                height="344">
                                                         </div>
                                                         <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
+                                                            <h4><a
+                                                                    href="{{ url('show/'.$article->id.'') }}">{{ $article44->post_judul }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                @endforeach
+
                                             </div>
                                         </div>
                                     </div>
