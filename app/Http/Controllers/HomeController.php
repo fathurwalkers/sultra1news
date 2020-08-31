@@ -10,10 +10,14 @@ class HomeController extends Controller
     public function index()
     {
         $articles = Article::latest()->get();
+        $article1 = Article::latest()->paginate(1);
         $articles_min = Article::latest()->paginate(5);
+        $article3 = Article::latest()->paginate(3);
         return view('home.index', [
             'articles' => $articles,
-            'articles_min' => $articles_min
+            'articles_min' => $articles_min,
+            'article1' => $article1,
+            'article3' => $article3
         ]);
     }
 

@@ -11,18 +11,18 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/ticker-style.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/slicknav.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/animate.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/magnific-popup.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/fontawesome-all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/themify-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/nice-select.css') }}">
-    <link rel="stylesheet" href="{{ asset('aznews/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/ticker-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/aznews/css/style.css') }}">
 </head>
 
 <body>
@@ -72,7 +72,8 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3 col-md-3">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
@@ -89,7 +90,8 @@
                             <div class="col-xl-10 col-lg-10 col-md-12 header-flex">
                                 <!-- sticky -->
                                 <div class="sticky-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-md-block">
@@ -143,16 +145,21 @@
                     <div class="row mt-4">
                         <div class="col-lg-8">
                             <!-- Trending Top -->
+
+                            @foreach ($article1 as $article11)
                             <div class="trending-top mb-30">
                                 <div class="trend-top-img">
-                                    <img src="assets/img/trending/trending_top.jpg" alt="">
+                                    <img src="{{ $article11->gambar }}" alt="">
                                     <div class="trend-top-cap">
-                                        <span>Appetizers</span>
-                                        <h2><a href="details.html">Welcome To The Best Model Winner<br> Contest At Look
-                                                of the year</a></h2>
+                                        <span>{{ $article11->post_slug }}</span>
+                                        <h2><a
+                                                href="{{ url('show/'.$article11->id.'') }}">{{ $article11->post_judul }}</a>
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
+
                             <!-- Trending Bottom -->
                             <div class="trending-bottom">
                                 <div class="row">
@@ -727,7 +734,8 @@
                             <div class="single-footer-caption">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><img src="{{ asset('assets/aznews/img/logo/logobaru.png') }}"
+                                            alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
