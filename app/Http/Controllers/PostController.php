@@ -49,14 +49,7 @@ class PostController extends Controller
             'login_id' => $user_sesi->id,
             'gambar' => $gambar
         ]);
-
-        // $posts->kategoris()->where('kategori_nama', $kategori)
-        //     ->createMany([
-        //         ['kategori_nama' => $kategori]
-        //     ]);
         $posts->kategoris()->attach($kategori_b);
-        // dd($posts);
-
         $gambars = new Gambar;
         $gambars = Gambar::create([
             'nama_gambar' => $gambar

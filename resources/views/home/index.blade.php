@@ -194,7 +194,11 @@
                                     <img src="{{ asset($article_min->gambar) }}" alt="" width="120" height="100">
                                 </div>
                                 <div class="trand-right-cap">
-                                    <span class="color3">TERBARU</span>
+
+                                    @foreach ($article_min->kategoris as $cat1)
+                                    <span class="color3">{{ $cat1->kategori_nama }}</span>
+                                    @endforeach
+
                                     <h4><a
                                             href="{{ url('show/'.$article_min->id.'') }}">{{ $article_min->post_judul }}</a>
                                     </h4>
