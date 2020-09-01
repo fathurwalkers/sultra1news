@@ -49,9 +49,4 @@ class HomeController extends Controller
     {
         //
     }
-
-    public function testnotif()
-    {
-        return view('testnotif');
-    }
 }
