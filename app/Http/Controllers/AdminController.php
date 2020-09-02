@@ -20,7 +20,6 @@ class AdminController extends Controller
         }
         // Alert::success('hore', 'hore');
         $users = session('data_login');
-        Alert::success('success', 'Success Message');
         return view('admin.index', ['users' => $users]);
     }
 
@@ -61,6 +60,7 @@ class AdminController extends Controller
 
     public function logout(Request $request)
     {
+        Alert::question('Keluar?', 'Apakah anda yakin ingin keluar?');
         $request->session()->flush();
         return redirect('/login');
     }
@@ -82,10 +82,12 @@ class AdminController extends Controller
             if ($cek_password) {
                 if ($data_login->level == 1) {
                     $users = session(['data_login' => $data_login]);
+                    Alert::success('Login berhasil', 'Anda telah berhasil login!');
                     return redirect('/administrator');
                 }
             }
         }
+        Alert::success('Login berhasil', 'Anda telah berhasil login!');
         return redirect('/login')->with('status_fail', 'Login gagal, username atau password salah')->withInput();
     }
 

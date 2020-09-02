@@ -10,7 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        Alert::success('welcome', 'Success Message');
         $articles = Article::latest()->get();
         $article1 = Article::latest()->paginate(1);
         $articles_min = Article::latest()->paginate(5);
@@ -47,8 +46,8 @@ class HomeController extends Controller
         //
     }
 
-    public function destroy($id)
-    {
-        //
-    }
+    // public function destroy($id)
+    // {
+    //     //
+    // }
 }
