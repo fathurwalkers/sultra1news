@@ -44,9 +44,11 @@
                                             </button>
                                         </form>
 
-                                        <form action="{{ route('deletepost') }}" method="post">
+                                        <form action="{{ url('/administrator')}}/{{$item->id}}/delete" method="post">
+                                            @method('delete')
                                             @csrf
-                                            <button type="submit" class="btn btn-danger" value="{{ $item->id }}">
+                                            <input type="hidden" value="{{ $item->id }}" name="article">
+                                            <button type="submit" class="btn btn-danger">
                                                 <i class="fas fa-times"></i>
                                                 Delete
                                             </button>

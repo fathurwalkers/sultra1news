@@ -26,7 +26,7 @@ class AddSoftDeleteToArticles extends Migration
     public function down()
     {
         Schema::table('articles', function (Blueprint $table) {
-            //
+            $table->dropSoftDeletes();
         });
     }
 }

@@ -93,8 +93,13 @@ class PostController extends Controller
         return redirect('/administrator')->with('berhasil_post', 'Post berhasil di Posting!');
     }
 
-    public function destroy(Article $article)
+    public function destroy(Article $article, Request $request)
     {
-        //
+        $delete = Article::where('id', $article->id)->first();
+        $delete->kategoris()->detach();
+        $kategori = Kategori::where('article_id', $article->id)->first();
+        $kategori->forceDelete();
+        $delete->forceDelete();
+        return redirect('/administrator');
     }
 }

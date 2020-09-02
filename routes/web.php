@@ -24,10 +24,10 @@ Route::prefix('/post')->group(function () {
 
 // Admin / User Route
 Route::prefix('/administrator')->group(function () {
+    Route::delete('/{article}/delete', 'PostController@destroy');
     Route::get('/', 'AdminController@index')->name('allpost');
     Route::get('/create', 'AdminController@create')->name('create');
     Route::post('/logout', 'AdminController@logout');
     // Route::get('/edit/{article}', 'PostController@edit');
-    Route::post('/delete', 'PostController@destroy')->name('deletepost');
     Route::get('/media', 'AdminController@media')->name('media');
 });
