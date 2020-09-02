@@ -16,9 +16,9 @@ class CreateArticleKategoriTable extends Migration
         Schema::create('article_kategori', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('article_id');
-            $table->foreign('article_id')->references('id')->on('articles');
+            $table->foreign('article_id')->references('id')->on('articles')->onDelete('cascade');
             $table->unsignedBigInteger('kategori_id');
-            $table->foreign('kategori_id')->references('id')->on('kategoris');
+            $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
             $table->timestamps();
         });
     }

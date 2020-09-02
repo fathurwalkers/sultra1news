@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\ArticleKategori;
 use App\Kategori;
 use App\Login;
 use App\Gambar;
@@ -97,8 +98,6 @@ class PostController extends Controller
     {
         $delete = Article::where('id', $article->id)->first();
         $delete->kategoris()->detach();
-        $kategori = Kategori::where('article_id', $article->id)->first();
-        $kategori->forceDelete();
         $delete->forceDelete();
         return redirect('/administrator');
     }
