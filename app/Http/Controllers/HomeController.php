@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use Alert;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        Alert::success('welcome', 'Success Message');
         $articles = Article::latest()->get();
         $article1 = Article::latest()->paginate(1);
         $articles_min = Article::latest()->paginate(5);

@@ -9,6 +9,7 @@ use App\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Alert;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,9 @@ class AdminController extends Controller
         if (!session('data_login')) {
             return redirect('/login');
         }
+        // Alert::success('hore', 'hore');
         $users = session('data_login');
+        Alert::success('success', 'Success Message');
         return view('admin.index', ['users' => $users]);
     }
 
