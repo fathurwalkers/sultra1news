@@ -8,6 +8,7 @@ use App\Kategori;
 use App\Login;
 use App\Gambar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -26,7 +27,6 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'post_judul' => 'required',
             'post_isi' => 'required',
-            'post_slug' => 'required',
             'kategori' => 'required'
         ]);
 
@@ -43,9 +43,11 @@ class PostController extends Controller
         // $kategori_req = json_encode($kategori_reqq);
         $user_sesi = session('data_login');
         $posts = new Article;
-        $slug = $request->post_judul;
+        $slug_req = $request->post_judul;
+        $slug_lower = Str::of($slug_req)->lower();
+        $slug = Str::slug($slug_lower, '-');
 
-        $slug_gen = Str::(16);
+        // dd($slug);
 
         $posts = Article::create([
             'post_judul' => $request->post_judul,
@@ -62,6 +64,7 @@ class PostController extends Controller
 
         $gambars->save();
         $posts->save();
+        // dd($posts);
 
         return redirect('/administrator/create')->with('berhasil_post', 'Post berhasil di Posting!');
     }
