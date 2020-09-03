@@ -229,7 +229,7 @@
                         <div class="col-12">
                             <div class="weekly-news-active dot-style d-flex dot-style">
 
-                                @foreach ($articles as $article)
+                                @foreach ($articles_min as $article)
                                 <div class="weekly-single">
                                     <div class="weekly-img">
                                         <img src="{{ asset($article->gambar) }}" alt="" width="370" height="432">

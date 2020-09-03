@@ -16,7 +16,7 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('post_judul', 500);
-            $table->text('post_isi');
+            $table->longText('post_isi');
             $table->string('post_slug');
             // $table->unsignedBigInteger('kategori_id');
             // $table->foreign('kategori_id')->references('id')->on('kategoris');
