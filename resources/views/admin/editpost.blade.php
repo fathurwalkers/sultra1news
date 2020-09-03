@@ -28,12 +28,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="slug">Slug Berita : </label>
-                    <input type="slug" name="post_slug" class="form-control" id="slug" aria-describedby="slugHelp"
-                        value="{{ $article->post_slug }}">
-                </div>
-
-                <div class="form-group">
                     <div class="card m-b-30">
 
                         <div class="form-check form-check-inline">

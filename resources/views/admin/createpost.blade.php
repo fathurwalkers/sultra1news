@@ -33,11 +33,6 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="slug">Slug Berita : </label>
-                    <input type="slug" name="post_slug" class="form-control" id="slug" aria-describedby="slugHelp">
-                </div>
-
-                <div class="form-group">
                     <div class="card m-b-30">
 
                         @foreach ($kategorilist as $kategori)

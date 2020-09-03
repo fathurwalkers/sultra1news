@@ -43,10 +43,14 @@ class PostController extends Controller
         // $kategori_req = json_encode($kategori_reqq);
         $user_sesi = session('data_login');
         $posts = new Article;
+        $slug = $request->post_judul;
+
+        $slug_gen = Str::(16);
+
         $posts = Article::create([
             'post_judul' => $request->post_judul,
             'post_isi' => $request->post_isi,
-            'post_slug' => $request->post_slug,
+            'post_slug' => $slug,
             'login_id' => $user_sesi->id,
             'gambar' => $gambar
         ]);
