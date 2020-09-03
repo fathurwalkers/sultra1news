@@ -25,16 +25,6 @@ class HomeController extends Controller
         ]);
     }
 
-    public function create()
-    {
-        //
-    }
-
-    public function store(Request $request)
-    {
-        //
-    }
-
     public function show(Article $article, $slug)
     {
         $articles = Article::find($article)->first();
@@ -52,14 +42,4 @@ class HomeController extends Controller
 
         return redirect('/');
     }
-
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    // public function destroy($id)
-    // {
-    //     //
-    // }
 }
