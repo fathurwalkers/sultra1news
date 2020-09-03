@@ -152,9 +152,8 @@
                                 <div class="trend-top-img">
                                     <img src="{{ $article11->gambar }}" alt="">
                                     <div class="trend-top-cap">
-                                        <span>{{ $article11->post_slug }}</span>
                                         <h2><a
-                                                href="{{ url('show/'.$article11->id.'') }}">{{ $article11->post_judul }}</a>
+                                                href="{{ url('show') }}/{{ $article11->id }}/{{ $article11->post_slug }}">{{ $article11->post_judul }}</a>
                                         </h2>
                                     </div>
                                 </div>
@@ -174,7 +173,8 @@
                                             <div class="trend-bottom-cap">
                                                 <span class="color3">BERITA PILIHAN</span>
                                                 <h4>
-                                                    <a href="{{ url('show/'.$article33->id.'') }}">{{ $article33->post_judul }}
+                                                    <a
+                                                        href="{{ url('show') }}/{{ $article33->id }}/{{ $article33->post_slug }}">{{ $article33->post_judul }}
                                                     </a>
                                                 </h4>
                                             </div>
@@ -201,7 +201,7 @@
                                     @endforeach
 
                                     <h4><a
-                                            href="{{ url('show/'.$article_min->id.'') }}">{{ $article_min->post_judul }}</a>
+                                            href="{{ url('show') }}/{{ $article_min->id }}/{{ $article_min->post_slug }}">{{ $article_min->post_judul }}</a>
                                     </h4>
                                 </div>
                             </div>
@@ -236,7 +236,8 @@
                                     </div>
                                     <div class="weekly-caption">
                                         <span class="color1">SULTRA1NEWS</span>
-                                        <h4><a href="{{ url('show/'.$article->id.'') }}">{{ $article->post_judul }}</a>
+                                        <h4><a
+                                                href="{{ url('show') }}/{{ $article->id }}/{{ $article->post_slug }}">{{ $article->post_judul }}</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -308,7 +309,7 @@
                                                         </div>
                                                         <div class="what-cap">
                                                             <h4><a
-                                                                    href="{{ url('show/'.$article->id.'') }}">{{ $article44->post_judul }}</a>
+                                                                    href="{{ url('show') }}/{{ $article44->id }}/{{ $article44->post_slug }}">{{ $article44->post_judul }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>

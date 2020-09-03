@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Alert;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -34,11 +35,22 @@ class HomeController extends Controller
         //
     }
 
-    public function show(Article $article)
+    public function show(Article $article, $slug)
     {
         $articles = Article::find($article)->first();
-        // dd($articles);
-        return view('show', ['articles' => $articles]);
+        $slug_receive = Article::where('post_slug', $slug)->first();
+        $kategori = Kategori::all();
+
+        if ($articles) {
+            if ($slug_receive) {
+                return view('show', [
+                    'articles' => $articles,
+                    'kategori' => $kategori
+                ]);
+            }
+        }
+
+        return redirect('/');
     }
 
     public function update(Request $request, $id)
