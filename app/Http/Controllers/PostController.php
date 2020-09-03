@@ -17,11 +17,6 @@ class PostController extends Controller
         //
     }
 
-    // public function create()
-    // {
-    //     //
-    // }
-
     public function store(Request $request)
     {
         $validatedData = $request->validate([

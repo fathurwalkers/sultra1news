@@ -30,7 +30,6 @@ class HomeController extends Controller
         $articles = Article::find($article)->first();
         $slug_receive = Article::where('post_slug', $slug)->first();
         $kategori = Kategori::all();
-
         if ($articles) {
             if ($slug_receive) {
                 return view('show', [
@@ -39,7 +38,6 @@ class HomeController extends Controller
                 ]);
             }
         }
-
         return redirect('/');
     }
 }
