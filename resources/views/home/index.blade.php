@@ -104,7 +104,7 @@
 
                                                     @foreach ($kategori as $kat)
                                                     <li><a
-                                                            href="{{ url('/kategori') }}/{{ $kat->kategori_id }}">{{ $kat->kategori_nama }}</a>
+                                                            href="{{url('/kategori')}}/{{$kat->id}}">{{ $kat->kategori_nama }}</a>
                                                     </li>
                                                     @endforeach
 

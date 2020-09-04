@@ -102,7 +102,7 @@
                                             <li><a href="{{ url('/') }}">SULTRANEWS</a>
                                                 <ul class="submenu">
 
-                                                    @foreach ($kategori as $kat)
+                                                    @foreach ($kategori2 as $kat)
                                                     <li><a
                                                             href="{{ url('/kategori') }}/{{ $kat->id }}">{{ $kat->kategori_nama }}</a>
                                                     </li>
@@ -162,11 +162,11 @@
                                         <div class="whats-news-caption">
                                             <div class="row">
 
-                                                @foreach ($article8 as $article88)
+                                                @foreach ($match as $article88)
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
                                                         <div class="what-img">
-                                                            <img src="{{ $article88->gambar }}" alt="" width="370"
+                                                            <img src="../{{ $article88->gambar }}" alt="" width="370"
                                                                 height="344">
                                                         </div>
                                                         <div class="what-cap">

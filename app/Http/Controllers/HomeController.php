@@ -52,12 +52,26 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    public function kategori(Request $request, ArticleKategori $kategori)
+    public function filterkategori(Request $request, Kategori $kategori)
     {
-        $match = ArticleKategori::where('kategori_id', $kategori->kategori_id)->get();
-        dd($match);
-        return view('home.showfilter', [
-            'match_kategori' => $match
+        $kategori2 = Kategori::all();
+        $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
+        // dd($match);
+        // $match2 = array_fetch($match, 'article_id');
+        // $match2 = $match[];
+        // $article1 = ArticleKategori::get();
+        // $articles = $article1->kategoris()->where('id', $match->article_id)->get();
+        $articles = Kategori::where('article_id', $match->article_id)->get();
+
+        // dump($match);
+        // dump($match2);
+        dump($articles);
+
+        return view('showfilter', [
+            // 'match' => $match2,
+            // 'match2' => $match2,
+            'kategori2' => $kategori2,
+            'match' => $match
         ]);
     }
 }

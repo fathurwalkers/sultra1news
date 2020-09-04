@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 // Home Route
 Route::get('/', 'HomeController@index');
-Route::get('/kategori', 'HomeController@kategori');
 Route::get('/login', 'AdminController@login');
 Route::post('/login', 'AdminController@postlogin');
+Route::get('/kategori/{kategori}', 'HomeController@filterkategori');
 Route::get('/register', 'AdminController@register');
 Route::post('/register', 'AdminController@postregister');
 Route::get('/show/{article}/{slug}', 'HomeController@show');
