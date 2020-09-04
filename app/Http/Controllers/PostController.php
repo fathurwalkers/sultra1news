@@ -119,8 +119,11 @@ class PostController extends Controller
         // dd($article);
         $komen = new Comment;
         $komen = Comment::create([
-            ''
+            'sender_name' => $request->sender_name,
+            'sender_content' => $request->sender_content,
+            'article_id' => $article->id,
         ]);
+        $komen->save();
         return redirect()->back();
     }
 }

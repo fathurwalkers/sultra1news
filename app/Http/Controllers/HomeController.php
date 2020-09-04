@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Alert;
+use App\Comment;
 use App\Kategori;
 use Illuminate\Http\Request;
 
@@ -33,12 +34,15 @@ class HomeController extends Controller
         $slug_receive = Article::where('post_slug', $slug)->first();
         $kategori = Kategori::all();
         $articles_4 = Article::latest()->paginate(4);
+        $post_id = $articles->id;
+        $comment_post = Comment::where('article_id', $post_id)->get();
         if ($articles) {
             if ($slug_receive) {
                 return view('show', [
                     'articles' => $articles,
                     'kategori' => $kategori,
-                    'articles_4' => $articles_4
+                    'articles_4' => $articles_4,
+                    'comment_post' => $comment_post
                 ]);
             }
         }

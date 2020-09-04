@@ -191,7 +191,9 @@
                             <h4>
                                 {{-- jumlah comment  --}}
                             </h4>
-                            <div class="comment-list">
+
+                            @foreach ($comment_post as $comment)
+                            <div class="comment-list card pt-2 pb-2">
                                 <div class="single-comment justify-content-between d-flex">
                                     <div class="user justify-content-between d-flex">
                                         <div class="thumb">
@@ -199,17 +201,18 @@
                                         </div>
                                         <div class="desc">
                                             <p class="comment">
-                                                {{-- Comment query  --}}
+                                                {{ $comment->sender_content }}
                                             </p>
                                             <div class="d-flex justify-content-between">
                                                 <div class="d-flex align-items-center">
                                                     <h5>
                                                         <a href="#">
-                                                            {{-- nama  --}}
+                                                            {{ $comment->sender_name }}
                                                         </a>
                                                     </h5>
                                                     <p class="date">
-                                                        {{-- waktu comment  --}}
+                                                        {{-- {{ $comment->created_at }} --}}
+                                                        {{date('d-m-Y', strtotime($comment->created_at)) }}
                                                     </p>
                                                 </div>
                                             </div>
@@ -217,6 +220,8 @@
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
+
                         </div>
                         <div class="comment-form">
                             <h4>Leave a Reply</h4>
@@ -227,20 +232,14 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <textarea class="form-control w-100" name="body" id="comment" cols="30"
-                                                rows="9" placeholder="Write Comment"></textarea>
+                                            <textarea class="form-control w-100" name="sender_content" id="comment"
+                                                cols="30" rows="9" placeholder="Write Comment"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input class="form-control" name="name" id="name" type="text"
+                                            <input class="form-control" name="sender_name" id="name" type="text"
                                                 placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <input class="form-control" name="email" id="email" type="email"
-                                                placeholder="Email">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -278,7 +277,7 @@
                                 <div class="media post_item">
                                     <img src="../../{{ $article4->gambar }}" alt="post" width="115" height="100">
                                     <div class="media-body">
-                                        <a href="single-blog.html">
+                                        <a href="{{ url('show') }}/{{ $article4->id }}/{{ $article4->post_slug }}">
                                             <h3>{{ $article4->post_judul }}</h3>
                                         </a>
                                     </div>
