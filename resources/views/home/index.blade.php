@@ -98,22 +98,20 @@
                                 <div class="main-menu d-none d-md-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
+                                            <li><a href="{{ url('/') }}">BERANDA</a></li>
+                                            <li><a href="{{ url('/') }}">SULTRANEWS</a>
                                                 <ul class="submenu">
 
                                                     @foreach ($kategori as $kat)
                                                     <li><a
-                                                            href="{{ url('/kategori') }}/{{ $kat->id }}">{{ $kat->kategori_nama }}</a>
+                                                            href="{{ url('/kategori') }}/{{ $kat->kategori_id }}">{{ $kat->kategori_nama }}</a>
                                                     </li>
                                                     @endforeach
 
                                                 </ul>
                                             </li>
+                                            <li><a href="categori.html">REDAKSI</a></li>
+                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
                                         </ul>
                                     </nav>
                                 </div>

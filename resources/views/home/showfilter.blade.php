@@ -98,19 +98,20 @@
                                 <div class="main-menu d-none d-md-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
+                                            <li><a href="{{ url('/') }}">BERANDA</a></li>
+                                            <li><a href="{{ url('/') }}">SULTRANEWS</a>
                                                 <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="details.html">Categori Details</a></li>
+
+                                                    @foreach ($kategori as $kat)
+                                                    <li><a
+                                                            href="{{ url('/kategori') }}/{{ $kat->id }}">{{ $kat->kategori_nama }}</a>
+                                                    </li>
+                                                    @endforeach
+
                                                 </ul>
                                             </li>
+                                            <li><a href="categori.html">REDAKSI</a></li>
+                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -139,120 +140,6 @@
     </header>
 
     <main>
-        <div class="trending-area fix">
-            <div class="container">
-                <div class="trending-main">
-                    <!-- Trending Tittle -->
-                    <div class="row mt-4">
-                        <div class="col-lg-8">
-                            <!-- Trending Top -->
-
-                            @foreach ($article1 as $article11)
-                            <div class="trending-top mb-30">
-                                <div class="trend-top-img">
-                                    <img src="{{ $article11->gambar }}" alt="">
-                                    <div class="trend-top-cap">
-                                        <h2><a
-                                                href="{{ url('show') }}/{{ $article11->id }}/{{ $article11->post_slug }}">{{ $article11->post_judul }}</a>
-                                        </h2>
-                                        @foreach ($article11->kategoris as $cat2)
-                                        <span class="color3">{{ $cat2->kategori_nama }}</span>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-
-                            <!-- Trending Bottom -->
-                            <div class="trending-bottom">
-                                <div class="row">
-
-                                    @foreach ($article3 as $article33)
-                                    <div class="col-lg-4">
-                                        <div class="single-bottom mb-35">
-                                            <div class="trend-bottom-img mb-30">
-                                                <img src="{{ $article33->gambar }}" alt="" width="237" height="158">
-                                            </div>
-                                            <div class="trend-bottom-cap">
-                                                <span class="color3">BERITA PILIHAN</span>
-                                                <h4>
-                                                    <a
-                                                        href="{{ url('show') }}/{{ $article33->id }}/{{ $article33->post_slug }}">{{ $article33->post_judul }}
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Riht content -->
-                        <div class="col-lg-4">
-
-                            @foreach ($articles_min as $article_min)
-                            <div class="trand-right-single d-flex">
-                                <div class="trand-right-img">
-                                    <img src="{{ asset($article_min->gambar) }}" alt="" width="120" height="100">
-                                </div>
-                                <div class="trand-right-cap">
-
-                                    @foreach ($article_min->kategoris as $cat1)
-                                    <span class="color3">{{ $cat1->kategori_nama }}</span>
-                                    @endforeach
-
-                                    <h4><a
-                                            href="{{ url('show') }}/{{ $article_min->id }}/{{ $article_min->post_slug }}">{{ $article_min->post_judul }}</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            @endforeach
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Trending Area End -->
-        <!--   Weekly-News start -->
-        <div class="weekly-news-area pt-50">
-            <div class="container">
-                <div class="weekly-wrapper">
-                    <!-- section Tittle -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section-tittle mb-30">
-                                <h3>Weekly Top News</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="weekly-news-active dot-style d-flex dot-style">
-
-                                @foreach ($articles_min as $article)
-                                <div class="weekly-single">
-                                    <div class="weekly-img">
-                                        <img src="{{ asset($article->gambar) }}" alt="" width="370" height="432">
-                                    </div>
-                                    <div class="weekly-caption">
-                                        <span class="color1">SULTRA1NEWS</span>
-                                        <h4><a
-                                                href="{{ url('show') }}/{{ $article->id }}/{{ $article->post_slug }}">{{ $article->post_judul }}</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                                @endforeach
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Weekly-News -->
         <!-- Whats New Start -->
         <section class="whats-news-area pt-50 pb-20">
             <div class="container">
@@ -261,35 +148,7 @@
                         <div class="row d-flex justify-content-between">
                             <div class="col-lg-3 col-md-3">
                                 <div class="section-tittle mb-30">
-                                    <h3>Whats New</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-9">
-                                <div class="properties__button">
-                                    <!--Nav Button  -->
-                                    {{-- <nav>
-                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
-                                                href="#nav-home" role="tab" aria-controls="nav-home"
-                                                aria-selected="true">All</a>
-                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
-                                                href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                                aria-selected="false">Lifestyle</a>
-                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
-                                                href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Travel</a>
-                                            <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab"
-                                                href="#nav-last" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Fashion</a>
-                                            <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab"
-                                                href="#nav-nav-Sport" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Sports</a>
-                                            <a class="nav-item nav-link" id="nav-technology" data-toggle="tab"
-                                                href="#nav-techno" role="tab" aria-controls="nav-contact"
-                                                aria-selected="false">Technology</a>
-                                        </div>
-                                    </nav> --}}
-                                    <!--End Nav Button  -->
+                                    <h3>Kategori</h3>
                                 </div>
                             </div>
                         </div>
