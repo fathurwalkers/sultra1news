@@ -19,6 +19,7 @@ Route::prefix('/post')->group(function () {
     Route::post('/store', 'PostController@store');
     Route::get('/edit/{article}', 'PostController@edit');
     Route::post('/update/{article}', 'PostController@update');
+    Route::post('/comment/send/{article}', 'PostController@comment');
 });
 
 

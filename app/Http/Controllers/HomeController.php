@@ -32,11 +32,13 @@ class HomeController extends Controller
         $articles = Article::find($article)->first();
         $slug_receive = Article::where('post_slug', $slug)->first();
         $kategori = Kategori::all();
+        $articles_4 = Article::latest()->paginate(4);
         if ($articles) {
             if ($slug_receive) {
                 return view('show', [
                     'articles' => $articles,
-                    'kategori' => $kategori
+                    'kategori' => $kategori,
+                    'articles_4' => $articles_4
                 ]);
             }
         }

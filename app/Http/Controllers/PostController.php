@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\ArticleKategori;
+use App\Comment;
 use App\Kategori;
 use App\Login;
 use App\Gambar;
@@ -111,5 +112,12 @@ class PostController extends Controller
         $delete->kategoris()->detach();
         $delete->forceDelete();
         return redirect('/administrator');
+    }
+
+    public function comment(Article $article, Request $request)
+    {
+        // dd($article);
+        $komen = new Comment;
+        return redirect()->back();
     }
 }
