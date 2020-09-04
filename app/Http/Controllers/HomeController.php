@@ -55,8 +55,9 @@ class HomeController extends Controller
     public function filterkategori(Request $request, Kategori $kategori)
     {
         $kategori2 = Kategori::all();
-        $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
-        dd($match);
+        $match = Kategori::where('id', $kategori->id)->get();
+        $match2 = Article::where('kategori_nama', $kategori->kategoris())->get();
+        dd($match2);
 
         return view('showfilter', [
             'kategori2' => $kategori2,

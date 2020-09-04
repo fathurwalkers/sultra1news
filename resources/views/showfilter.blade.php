@@ -178,8 +178,8 @@
                                     </div>
                                     @endforeach --}}
 
-                                    @foreach ($match as $matching)
-                                    @foreach ($matching->article as $articlefetch)
+                                    {{-- @foreach ($match as $matching) --}}
+                                    @foreach ($match as $articlefetch)
                                     <div class="col-lg-6 col-md-6">
                                         <div class="single-what-news mb-100">
                                             <div class="what-img">
@@ -193,7 +193,7 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    @endforeach
+                                    {{-- @endforeach --}}
 
                                 </div>
                             </div>
