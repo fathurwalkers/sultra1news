@@ -155,6 +155,9 @@
                                         <h2><a
                                                 href="{{ url('show') }}/{{ $article11->id }}/{{ $article11->post_slug }}">{{ $article11->post_judul }}</a>
                                         </h2>
+                                        @foreach ($article11->kategoris as $cat2)
+                                        <span class="color3">{{ $cat2->kategori_nama }}</span>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -300,16 +303,16 @@
                                         <div class="whats-news-caption">
                                             <div class="row">
 
-                                                @foreach ($article4 as $article44)
+                                                @foreach ($article8 as $article88)
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
                                                         <div class="what-img">
-                                                            <img src="{{ $article44->gambar }}" alt="" width="370"
+                                                            <img src="{{ $article88->gambar }}" alt="" width="370"
                                                                 height="344">
                                                         </div>
                                                         <div class="what-cap">
                                                             <h4><a
-                                                                    href="{{ url('show') }}/{{ $article44->id }}/{{ $article44->post_slug }}">{{ $article44->post_judul }}</a>
+                                                                    href="{{ url('show') }}/{{ $article88->id }}/{{ $article88->post_slug }}">{{ $article88->post_judul }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>

@@ -19,6 +19,9 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
         $validatedData = $request->validate([
             'post_judul' => 'required',
             'post_isi' => 'required',
@@ -84,6 +87,9 @@ class PostController extends Controller
 
     public function update(Request $request, Article $article)
     {
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
         // POST UPDATE DATA
         $posts = Article::where('id', $article->id)->first()->update([
             'post_judul' => $request->post_judul,
@@ -98,6 +104,9 @@ class PostController extends Controller
 
     public function destroy(Article $article, Request $request)
     {
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
         $delete = Article::where('id', $article->id)->first();
         $delete->kategoris()->detach();
         $delete->forceDelete();

@@ -25,6 +25,9 @@ class AdminController extends Controller
 
     public function create()
     {
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
         $users = session('data_login');
         $kategorilist = Kategori::all();
         return view('admin.createpost', [
@@ -33,30 +36,30 @@ class AdminController extends Controller
         ]);
     }
 
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
-    public function show(Login $login)
-    {
-        return view('admin.daftarpost');
-    }
+    // public function show(Login $login)
+    // {
+    //     return view('admin.daftarpost');
+    // }
 
-    public function edit(Article $article)
-    {
-        //
-    }
+    // public function edit(Article $article)
+    // {
+    //     //
+    // }
 
-    public function update(Request $request, Login $login)
-    {
-        //
-    }
+    // public function update(Request $request, Login $login)
+    // {
+    //     //
+    // }
 
-    public function destroy(Login $login)
-    {
-        //
-    }
+    // public function destroy(Login $login)
+    // {
+    //     //
+    // }
 
     public function logout(Request $request)
     {
@@ -131,6 +134,9 @@ class AdminController extends Controller
 
     public function media()
     {
+        if (!session('data_login')) {
+            return redirect('/login');
+        }
         $users = session('data_login');
         $gambars = Gambar::latest()->get();
         return view('admin.media', [
