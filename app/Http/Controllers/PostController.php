@@ -118,6 +118,9 @@ class PostController extends Controller
     {
         // dd($article);
         $komen = new Comment;
+        $komen = Comment::create([
+            ''
+        ]);
         return redirect()->back();
     }
 }
