@@ -61,16 +61,18 @@ class HomeController extends Controller
         // $match2 = $match[];
         // $article1 = ArticleKategori::get();
         // $articles = $article1->kategoris()->where('id', $match->article_id)->get();
-        $articles = Kategori::where('article_id', $match->article_id)->get();
+        // $arr = ArticleKategori
+        // $test = Article::where('id', $match->article->article_id)->get();
+        dd($match);
 
-        // dump($match);
+        // dd($arr);
+        // dump($test);
         // dump($match2);
-        dump($articles);
+        // dump($articles);
 
         return view('showfilter', [
-            // 'match' => $match2,
-            // 'match2' => $match2,
             'kategori2' => $kategori2,
+            // 'articles' => $articles,
             'match' => $match
         ]);
     }
