@@ -105,13 +105,10 @@
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="#">Pages</a>
                                                 <ul class="submenu">
-
-                                                    @foreach ($kategori as $kat)
-                                                    <li><a
-                                                            href="{{ url('/kategori') }}/{{ $kat->id }}">{{ $kat->kategori_nama }}</a>
-                                                    </li>
-                                                    @endforeach
-
+                                                    <li><a href="elements.html">Element</a></li>
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="single-blog.html">Blog Details</a></li>
+                                                    <li><a href="details.html">Categori Details</a></li>
                                                 </ul>
                                             </li>
                                         </ul>

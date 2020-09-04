@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Alert;
+use App\ArticleKategori;
 use App\Comment;
 use App\Kategori;
 use Illuminate\Http\Request;
@@ -47,5 +48,11 @@ class HomeController extends Controller
             }
         }
         return redirect('/');
+    }
+
+    public function filterkategori(Request $request, ArticleKategori $kategori)
+    {
+        $match = ArticleKategori::where('kategori_id', $kategori)->get();
+        dd($match);
     }
 }
