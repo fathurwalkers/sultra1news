@@ -95,8 +95,7 @@ class PostController extends Controller
         $posts = Article::where('id', $article->id)->first()->update([
             'post_judul' => $request->post_judul,
             'post_isi' => $request->post_isi,
-            'post_slug' => $request->post_slug,
-            'kategori' => $article->kategori,
+            'post_slug' => $article->post_slug,
             'login_id' => $article->login_id,
             'gambar' => $article->gambar
         ]);

@@ -11,6 +11,6 @@ class Kategori extends Model
     ];
     public function articles()
     {
-        return $this->belongsToMany('App\Article');
+        return $this->belongsToMany('App\Article')->withPivot('kategori_id', 'article_id');
     }
 }
