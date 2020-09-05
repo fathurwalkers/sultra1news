@@ -53,8 +53,9 @@ class HomeController extends Controller
         return redirect('/');
     }
 
-    public function filterkategori(Request $request, Kategori $kategori)
+    public function filterkategori(Request $request, Kategori $kategori, $kategorinama)
     {
+        // dd($kategorinama);
         $kategori2 = Kategori::all();
         $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
         return view('showfilter', [

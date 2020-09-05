@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'AdminController@login');
 Route::post('/login', 'AdminController@postlogin');
-Route::get('/kategori/{kategori}', 'HomeController@filterkategori');
+Route::get('/kategori/{kategori}/{kategorinama}', 'HomeController@filterkategori');
 Route::get('/register', 'AdminController@register');
 Route::post('/register', 'AdminController@postregister');
 Route::get('/show/{article}/{slug}', 'HomeController@show');

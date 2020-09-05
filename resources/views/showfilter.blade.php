@@ -104,7 +104,7 @@
 
                                                     @foreach ($kategori2 as $kat)
                                                     <li><a
-                                                            href="{{ url('/kategori') }}/{{ $kat->id }}">{{ $kat->kategori_nama }}</a>
+                                                            href="{{url('/kategori')}}/{{$kat->id}}/{{$kat->kategori_nama}}">{{ $kat->kategori_nama }}</a>
                                                     </li>
                                                     @endforeach
 
@@ -168,7 +168,7 @@
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
                                                         <div class="what-img">
-                                                            <img src="../{{ $articlesfetch->gambar }}" alt=""
+                                                            <img src="../../{{ $articlesfetch->gambar }}" alt=""
                                                                 width="370" height="344">
                                                         </div>
                                                         <div class="what-cap">
