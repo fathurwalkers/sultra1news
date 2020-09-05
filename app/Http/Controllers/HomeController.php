@@ -7,6 +7,7 @@ use Alert;
 use App\ArticleKategori;
 use App\Comment;
 use App\Kategori;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -54,15 +55,23 @@ class HomeController extends Controller
 
     public function filterkategori(Request $request, Kategori $kategori)
     {
+        // dd($kategori->id);
         $kategori2 = Kategori::all();
-        $match = ArticleKategori::get();
-        $match2 = Article::where('id', $match->article_id)->get();
-        dd($match);
+        $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
+        // dd($match);
+        $result = [];
+        foreach ($match as $article) {
+            $match2 = Article::where('id', $article->article_id)->get();
+            // dump($article->article_id);
+        }
+
+
+        // dd($match2);
         // dd($kategori);
 
         return view('showfilter', [
             'kategori2' => $kategori2,
-            'match' => $match
+            'match' => $match2
         ]);
     }
 }

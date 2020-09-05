@@ -162,6 +162,8 @@
                                         <div class="whats-news-caption">
                                             <div class="row">
 
+                                                {{ dd($match) }}
+
                                                 {{-- @foreach ($match as $articlefetch)
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
@@ -178,7 +180,7 @@
                                     </div>
                                     @endforeach --}}
 
-                                    {{-- @foreach ($match as $matching) --}}
+
                                     @foreach ($match as $articlefetch)
                                     <div class="col-lg-6 col-md-6">
                                         <div class="single-what-news mb-100">
@@ -193,7 +195,7 @@
                                         </div>
                                     </div>
                                     @endforeach
-                                    {{-- @endforeach --}}
+
 
                                 </div>
                             </div>
