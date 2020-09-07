@@ -14,6 +14,10 @@ Route::get('/kategori/{kategori}/{kategorinama}', 'HomeController@filterkategori
 Route::get('/register', 'AdminController@register');
 Route::post('/register', 'AdminController@postregister');
 Route::get('/show/{article}/{slug}', 'HomeController@show');
+Route::get('/redaksi', 'HomeController@redaksi');
+Route::get('/hubungi-kami', 'HomeController@hubungikami');
+Route::get('/pedoman-media-siber', 'HomeController@pedomanmediasiber');
+Route::get('/about', 'HomeController@about');
 
 // Post Route
 Route::prefix('/post')->group(function () {

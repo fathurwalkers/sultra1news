@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
                                 <div class="header-banner f-right ">
-                                    <img src="assets/img/hero/header_card.jpg" alt="">
+                                    <img src="{{ asset('/assets/aznews/img/hero/header_card.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -109,8 +109,9 @@
 
                                                 </ul>
                                             </li>
-                                            <li><a href="categori.html">REDAKSI</a></li>
-                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/redaksi') }}">REDAKSI</a></li>
+                                            <li><a href="{{ url('/hubungi-kami') }}">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/about') }}">ABOUT</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -143,7 +144,7 @@
 
         <section class="blog_area single-post-area mt-4 mb-7">
             <div class="container">
-                <div class="row">
+                <div class="row border">
                     <div class="col-lg-8 posts-list">
 
 
@@ -163,7 +164,9 @@
                                             @endforeach --}}
                                             {{-- {{ $articles->kategoris()->kategori_nama }} --}}
                                         </a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i>
+                                            {{-- comment  --}}
+                                        </a></li>
                                 </ul>
 
                                 <p class="excert">
@@ -253,7 +256,7 @@
                             </form>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 border">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
                                 <form action="#">
@@ -416,9 +419,9 @@
                         <div class="col-lg-6">
                             <div class="footer-menu f-right">
                                 <ul>
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ url('/redaksi') }}">Redaksi</a></li>
+                                    <li><a href="{{ url('/pedoman-media-siber') }}">Pedoman Media Siber</a></li>
+                                    <li><a href="{{ url('/hubungi-kami') }}">Hubungi Kami</a></li>
                                 </ul>
                             </div>
                         </div>

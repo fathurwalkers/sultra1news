@@ -59,10 +59,14 @@ class HomeController extends Controller
     {
         // dd($kategorinama);
         $kategori2 = Kategori::all();
+        $kategori3 = Kategori::all();
+        $articles4 = Article::latest()->paginate(4);
         $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
         return view('showfilter', [
             'kategori2' => $kategori2,
-            'match' => $match
+            'match' => $match,
+            'articles4' => $articles4,
+            'kategori3' => $kategori3
         ]);
     }
 
@@ -79,5 +83,10 @@ class HomeController extends Controller
     public function pedomanmediasiber()
     {
         return view('pedoman-media-siber');
+    }
+
+    public function about()
+    {
+        return view('about');
     }
 }

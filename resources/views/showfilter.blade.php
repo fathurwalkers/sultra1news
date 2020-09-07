@@ -79,7 +79,7 @@
                             </div>
                             <div class="col-xl-9 col-lg-9 col-md-9">
                                 <div class="header-banner f-right ">
-                                    <img src="assets/img/hero/header_card.jpg" alt="">
+                                    <img src="{{ asset('/assets/aznews/img/hero/header_card.jpg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -110,8 +110,9 @@
 
                                                 </ul>
                                             </li>
-                                            <li><a href="categori.html">REDAKSI</a></li>
-                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/redaksi') }}">REDAKSI</a></li>
+                                            <li><a href="{{ url('/hubungi-kami') }}">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/about') }}">ABOUT</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -186,339 +187,75 @@
                                         </div>
                                     </div>
                                     <!-- Card two -->
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                        aria-labelledby="nav-profile-tab">
-                                        <div class="whats-news-caption">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- Card three -->
-                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                        aria-labelledby="nav-contact-tab">
-                                        <div class="whats-news-caption">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- card fure -->
-                                    <div class="tab-pane fade" id="nav-last" role="tabpanel"
-                                        aria-labelledby="nav-last-tab">
-                                        <div class="whats-news-caption">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- card Five -->
-                                    <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel"
-                                        aria-labelledby="nav-Sports">
-                                        <div class="whats-news-caption">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!-- card Six -->
-                                    <div class="tab-pane fade" id="nav-techno" role="tabpanel"
-                                        aria-labelledby="nav-technology">
-                                        <div class="whats-news-caption">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews1.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews2.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews3.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="single-what-news mb-100">
-                                                        <div class="what-img">
-                                                            <img src="assets/img/news/whatNews4.jpg" alt="">
-                                                        </div>
-                                                        <div class="what-cap">
-                                                            <span class="color1">Night party</span>
-                                                            <h4><a href="#">Welcome To The Best Model Winner Contest</a>
-                                                            </h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <!-- End Nav Card -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle mb-40">
-                            <h3>Follow Us</h3>
-                        </div>
-                        <!-- Flow Socail -->
-                        <div class="single-follow mb-45">
-                            <div class="single-box">
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                        <a href="#"><img src="assets/img/news/icon-fb.png" alt=""></a>
+                    <div class="col-lg-4 border">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget search_widget">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Search Keyword"
+                                                onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Search Keyword'">
+                                            <div class="input-group-append">
+                                                <button class="btns" type="button"><i class="ti-search"></i></button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="follow-count">
-                                        <span>8,045</span>
-                                        <p>Fans</p>
-                                    </div>
-                                </div>
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                        <a href="#"><img src="assets/img/news/icon-tw.png" alt=""></a>
-                                    </div>
-                                    <div class="follow-count">
-                                        <span>8,045</span>
-                                        <p>Fans</p>
-                                    </div>
-                                </div>
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                        <a href="#"><img src="assets/img/news/icon-ins.png" alt=""></a>
-                                    </div>
-                                    <div class="follow-count">
-                                        <span>8,045</span>
-                                        <p>Fans</p>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Search</button>
+                                </form>
+                            </aside>
+                            <aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title">Recent Post</h3>
+                                @foreach ($articles4 as $post4)
+                                <div class="media post_item">
+                                    <img src="../../{{ $post4->gambar }}" alt="post" width="115" height="100">
+                                    <div class="media-body">
+                                        <a href="{{ url('show') }}/{{ $post4->id }}/{{ $post4->post_slug }}">
+                                            <h3>{{ $post4->post_judul }}</h3>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="follow-us d-flex align-items-center">
-                                    <div class="follow-social">
-                                        <a href="#"><img src="assets/img/news/icon-yo.png" alt=""></a>
+                                @endforeach
+
+                            </aside>
+                            <aside class="single_sidebar_widget tag_cloud_widget">
+                                <h4 class="widget_title">Tag Clouds</h4>
+                                <ul class="list">
+                                    @foreach ($kategori3 as $one)
+                                    <li>
+                                        <a href="#">{{ $one->kategori_nama }}</a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </aside>
+
+                            <aside class="single_sidebar_widget newsletter_widget">
+                                <h4 class="widget_title">Newsletter</h4>
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email'" placeholder="Enter email"
+                                            required="">
                                     </div>
-                                    <div class="follow-count">
-                                        <span>8,045</span>
-                                        <p>Fans</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- New Poster -->
-                        <div class="news-poster d-none d-lg-block">
-                            <img src="assets/img/news/news_card.jpg" alt="">
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Subscribe</button>
+                                </form>
+                            </aside>
                         </div>
                     </div>
                 </div>
@@ -627,9 +364,9 @@
                         <div class="col-lg-6">
                             <div class="footer-menu f-right">
                                 <ul>
-                                    <li><a href="#">Redaksi</a></li>
-                                    <li><a href="#">Pedoman Media Siber</a></li>
-                                    <li><a href="#">Hubungi Kami</a></li>
+                                    <li><a href="{{ url('/redaksi') }}">Redaksi</a></li>
+                                    <li><a href="{{ url('/pedoman-media-siber') }}">Pedoman Media Siber</a></li>
+                                    <li><a href="{{ url('/hubungi-kami') }}">Hubungi Kami</a></li>
                                 </ul>
                             </div>
                         </div>

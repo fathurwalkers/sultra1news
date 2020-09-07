@@ -110,8 +110,9 @@
 
                                                 </ul>
                                             </li>
-                                            <li><a href="categori.html">REDAKSI</a></li>
-                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/redaksi') }}">REDAKSI</a></li>
+                                            <li><a href="{{ url('/hubungi-kami') }}">HUBUNGI KAMI</a></li>
+                                            <li><a href="{{ url('/about') }}">ABOUT</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -762,9 +763,9 @@
                         <div class="col-lg-6">
                             <div class="footer-menu f-right">
                                 <ul>
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="{{ url('/redaksi') }}">Redaksi</a></li>
+                                    <li><a href="{{ url('/pedoman-media-siber') }}">Pedoman Media Siber</a></li>
+                                    <li><a href="{{ url('/hubungi-kami') }}">Hubungi Kami</a></li>
                                 </ul>
                             </div>
                         </div>
