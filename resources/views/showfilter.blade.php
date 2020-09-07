@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/aznews/img/favicon-sultra.ico') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/aznews/css/bootstrap.min.css') }}">
@@ -541,10 +541,17 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames
-                                            lectus tempor da blandit gravida sodales Suscipit mauris pede for con
-                                            sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida
-                                            sodales Suscipit mauris pede for sectetuer.</p>
+                                        <p>
+                                            Sultra1News adalah Media Online (Siber) yang menyediakan berita dari
+                                            berbagai bagian terkhusus
+                                            provinsi Sulawesi Tenggara. Seperti pada moto Kami "Investigasi dalam
+                                            Berita", yang berarti
+                                            berita kami berasal dari investigasi berdasarkan fakta yang ada dan tidak
+                                            dibuat-buat.
+                                            kami bertekad untuk selalu menyediakan berita yang berkualitas sehingga para
+                                            pembaca akan lebih
+                                            merasa puas dengan apa yang kami sediakan.
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- social -->
@@ -586,17 +593,12 @@
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
                         <div class="single-footer-caption mb-50 mt-60">
                             <div class="footer-tittle">
-                                <h4>Instagram Feed</h4>
+                                <h4>
+                                    {{-- header content  --}}
+                                </h4>
                             </div>
                             <div class="instagram-gellay">
-                                <ul class="insta-feed">
-                                    <li><a href="#"><img src="assets/img/post/instra1.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra2.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra3.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra4.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra5.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="assets/img/post/instra6.jpg" alt=""></a></li>
-                                </ul>
+                                {{-- Content  --}}
                             </div>
                         </div>
                     </div>
@@ -614,9 +616,10 @@
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     Copyright &copy;<script>
                                         document.write(new Date().getFullYear());
-                                    </script> All rights reserved | This template is made with <i class="ti-heart"
-                                        aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                        target="_blank">Colorlib</a>
+                                    </script> All rights reserved | Forged by Sultra1News <i class="ti-heart"
+                                        aria-hidden="true"></i>
+                                    {{-- by <a href="https://colorlib.com"
+                                        target="_blank">Colorlib</a> --}}
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>
@@ -624,9 +627,9 @@
                         <div class="col-lg-6">
                             <div class="footer-menu f-right">
                                 <ul>
-                                    <li><a href="#">Terms of use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Redaksi</a></li>
+                                    <li><a href="#">Pedoman Media Siber</a></li>
+                                    <li><a href="#">Hubungi Kami</a></li>
                                 </ul>
                             </div>
                         </div>

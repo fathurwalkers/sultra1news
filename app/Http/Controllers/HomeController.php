@@ -37,6 +37,7 @@ class HomeController extends Controller
         $articles = Article::find($article)->first();
         $slug_receive = Article::where('post_slug', $slug)->first();
         $kategori = Kategori::all();
+        $kategori2 = Kategori::all();
         $articles_4 = Article::latest()->paginate(4);
         $post_id = $articles->id;
         $comment_post = Comment::where('article_id', $post_id)->get();
@@ -46,7 +47,8 @@ class HomeController extends Controller
                     'articles' => $articles,
                     'kategori' => $kategori,
                     'articles_4' => $articles_4,
-                    'comment_post' => $comment_post
+                    'comment_post' => $comment_post,
+                    'kategori2' => $kategori2
                 ]);
             }
         }
@@ -62,5 +64,20 @@ class HomeController extends Controller
             'kategori2' => $kategori2,
             'match' => $match
         ]);
+    }
+
+    public function redaksi()
+    {
+        return view('redaksi');
+    }
+
+    public function hubungikami()
+    {
+        return view('hubungi-kami');
+    }
+
+    public function pedomanmediasiber()
+    {
+        return view('pedoman-media-siber');
     }
 }

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/aznews/img/favicon-sultra.ico') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('assets/aznews/css/bootstrap.min.css') }}">
@@ -97,19 +97,20 @@
                                 <div class="main-menu d-none d-md-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="categori.html">Category</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="#">Pages</a>
+                                            <li><a href="{{ url('/') }}">BERANDA</a></li>
+                                            <li><a href="{{ url('/') }}">SULTRANEWS</a>
                                                 <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="details.html">Categori Details</a></li>
+
+                                                    @foreach ($kategori2 as $kat)
+                                                    <li><a
+                                                            href="{{url('/kategori')}}/{{$kat->id}}/{{$kat->kategori_nama}}">{{ $kat->kategori_nama }}</a>
+                                                    </li>
+                                                    @endforeach
+
                                                 </ul>
                                             </li>
+                                            <li><a href="categori.html">REDAKSI</a></li>
+                                            <li><a href="contact.html">HUBUNGI KAMI</a></li>
                                         </ul>
                                     </nav>
                                 </div>
