@@ -164,7 +164,8 @@
                                             <div class="row">
 
                                                 @foreach ($match as $article)
-                                                <?php $match2 = \App\Article::where('id', $article->article_id)->get() ?>
+                                                <?php $match2 = \App\Article::where('id', $article->article_id)->latest()->paginate(2); ?>
+                                                {{ $match2->links() }}
                                                 @foreach ($match2 as $articlesfetch)
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="single-what-news mb-100">
@@ -181,8 +182,6 @@
                                                 </div>
                                                 @endforeach
                                                 @endforeach
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -203,22 +202,6 @@
                     </div>
                     <div class="col-lg-4 border">
                         <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Search Keyword"
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
-                                            <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                </form>
-                            </aside>
                             <aside class="single_sidebar_widget popular_post_widget">
                                 <h3 class="widget_title">Recent Post</h3>
                                 @foreach ($articles4 as $post4)
@@ -238,7 +221,8 @@
                                 <ul class="list">
                                     @foreach ($kategori3 as $one)
                                     <li>
-                                        <a href="#">{{ $one->kategori_nama }}</a>
+                                        <a
+                                            href="{{url('/kategori')}}/{{$one->id}}/{{$one->kategori_nama}}">{{ $one->kategori_nama }}</a>
                                     </li>
                                     @endforeach
                                 </ul>
@@ -300,42 +284,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4  col-sm-6">
+                    <div class="col-xl-5 col-lg-5 col-md-4  col-sm-6">
                         <div class="single-footer-caption mt-60">
                             <div class="footer-tittle">
-                                <h4>Newsletter</h4>
-                                <p>Heaven fruitful doesn't over les idays appear creeping</p>
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank"
-                                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part">
-                                            <input type="email" name="email" id="newsletter-form-email"
-                                                placeholder="Email Address" class="placeholder hide-on-focus"
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = ' Email Address '">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm"><img
-                                                        src="assets/img/logo/form-iocn.png" alt=""></button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50 mt-60">
-                            <div class="footer-tittle">
-                                <h4>
-                                    {{-- header content  --}}
-                                </h4>
-                            </div>
-                            <div class="instagram-gellay">
-                                {{-- Content  --}}
+                                <h4>Contact Us</h4>
+                                <p>
+                                    Alamat : Jln. Bakti Abri No.5, Bukit Wolio Indah Kota Baubau. Sulawesi
+                                    Tenggara<br />
+                                    Telpon HP : +6281245905999<br />
+                                    Email : sultra1news@gmail.com<br />
+                                    Kontak Iklan : sultra1news@gmail.com – 0402 – 2811 – 930
+                                </p>
                             </div>
                         </div>
                     </div>

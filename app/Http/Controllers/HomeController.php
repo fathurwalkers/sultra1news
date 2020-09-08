@@ -60,7 +60,7 @@ class HomeController extends Controller
         // dd($kategorinama);
         $kategori2 = Kategori::all();
         $kategori3 = Kategori::all();
-        $articles4 = Article::latest()->paginate(4);
+        $articles4 = Article::latest()->paginate(5);
         $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
         return view('showfilter', [
             'kategori2' => $kategori2,
@@ -77,16 +77,38 @@ class HomeController extends Controller
 
     public function hubungikami()
     {
-        return view('hubungi-kami');
+        $kategori = Kategori::all();
+        $kategori2 = Kategori::all();
+        $articles_4 = Article::latest()->paginate(4);
+
+        return view('hubungi-kami', [
+            'kategori' => $kategori,
+            'articles_4' => $articles_4,
+            'kategori2' => $kategori2
+        ]);
     }
 
     public function pedomanmediasiber()
     {
-        return view('pedoman-media-siber');
+        $kategori = Kategori::all();
+        $kategori2 = Kategori::all();
+        $articles_4 = Article::latest()->paginate(4);
+        return view('pedoman-media-siber', [
+            'kategori' => $kategori,
+            'articles_4' => $articles_4,
+            'kategori2' => $kategori2
+        ]);
     }
 
     public function about()
     {
-        return view('about');
+        $kategori = Kategori::all();
+        $kategori2 = Kategori::all();
+        $articles_4 = Article::latest()->paginate(4);
+        return view('about', [
+            'kategori' => $kategori,
+            'articles_4' => $articles_4,
+            'kategori2' => $kategori2
+        ]);
     }
 }

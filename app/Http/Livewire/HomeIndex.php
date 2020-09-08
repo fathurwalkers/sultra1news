@@ -11,7 +11,7 @@ class HomeIndex extends Component
 {
     public function render()
     {
-        $data = Article::with('kategoris')->latest()->get();
+        $data = Article::with('kategoris')->latest()->paginate(5);
         // $kategori = Article::with('kategoris')->latest()->get();
         // dd($data);
         return view('livewire.home-index', [

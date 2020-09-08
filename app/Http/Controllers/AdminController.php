@@ -36,31 +36,6 @@ class AdminController extends Controller
         ]);
     }
 
-    // public function store(Request $request)
-    // {
-    //     //
-    // }
-
-    // public function show(Login $login)
-    // {
-    //     return view('admin.daftarpost');
-    // }
-
-    // public function edit(Article $article)
-    // {
-    //     //
-    // }
-
-    // public function update(Request $request, Login $login)
-    // {
-    //     //
-    // }
-
-    // public function destroy(Login $login)
-    // {
-    //     //
-    // }
-
     public function logout(Request $request)
     {
         Alert::question('Keluar?', 'Apakah anda yakin ingin keluar?');
