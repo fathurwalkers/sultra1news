@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>News HTML-5 Template </title>
+    <title>Redaksi - Sultra1News</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -146,8 +146,56 @@
                     <div class="col-lg-8 posts-list">
                         <div class="card w-100 mt-3">
                             <div class="card-body">
-                                <h5 class="card-title">Hubungi Kami</h5>
+                                <h5 class="card-title"><b>REDAKSI</b></h5>
                                 <p class="card-text">
+                                    <b>Pimpinan Perusahaan :</b><br />
+                                    - Djery Lihawa<br />
+                                    <br />
+                                    <b>Redaktur Pemberitaan / Penanggung Jawab :</b><br />
+                                    - Djery Lihawa .S.Kom<br />
+                                    <br />
+                                    <b>Pemimpin Redaksi :</b><br />
+                                    - Fahmy Fotaleno<br />
+                                    <br />
+                                    <b>Wakil Pemimpin Redaksi :</b><br />
+                                    - Isharto<br />
+                                    <br />
+                                    <b>Redaktur Pelaksana :</b><br />
+                                    - La Ode Agus<br />
+                                    <br />
+                                    <b>Kepala Peliputan :</b><br />
+                                    - Fathur Walkers / Daerah dan Luar Negeri<br />
+                                    - Bung Iwan / Jakarta Jabotabek<br />
+                                    - Fataleno / Jakarta Jabotabek<br />
+                                    - Genjy Arun / Indonesia Timur<br />
+                                    - Jum Rama Saputra / Daerah Sulawesi<br />
+                                    - Djery Lihawa /Kepala Peliputan Investigator Korupsi<br />
+                                    - Yudi Hendra Rahim / Redaktur Pemberitaan Kasus Korupsi Sulawesi<br />
+                                    <br />
+                                    <b>Tim Jurnalis Peliputan SultraSatu News :</b><br />
+                                    - Djery Lihawa (Redaktur Investigasi Pemberitaan)<br />
+                                    - Fathur Walkers (Pemberitaan Luar Negeri)<br />
+                                    - Genjy Arun (Wartawan Investigasi)<br />
+                                    - Muh. Amir<br />
+                                    - Bung Iwan (Informan Dalam Negeri)<br />
+                                    - La Ode Agus, Djaelani (Wartawan Pidana dan Hukum)<br />
+                                    - Cakra (Editor dan Publisher)<br />
+                                    - Assyuraul Jannah (Marketting)<br />
+                                    - Adhyatma Teguh (Wartawan SultraSatu.News)<br />
+                                    - Jum Rama Saputra (Wartawan SultraSatu.News)<br />
+                                    - Chimenk (Wartawan SultraSatu.News)<br />
+                                    - Yudi Hendra (Wartawan SultraSatu.News)<br />
+                                    <br />
+                                    <b>Ombutsman PT. Sultra Satu News :</b><br />
+                                    - Ardi, SH.<br />
+                                    <br />
+                                    <u>Seluruh Karyawan PT. Sultra Satu News adalah Anggota Lembaga Pewarta
+                                        Indonesia<br />
+                                        (Persatuan Wartawan Indonesia) https://www.sultra1news.com/ | Media Cyber
+                                        Group.</u><br />
+                                    <br />
+                                    <br />
+                                    <b>Hubungi Kami</b><br />
                                     Alamat Redaksi : Jln. Bakti Abri No.5, Bukit Wolio Indah Kota Baubau. Sulawesi
                                     Tenggara<br />
                                     Telpon HP : +6281245905999<br />
@@ -155,7 +203,7 @@
                                     Facebook Fans Page : https://www.facebook.com/Sultra1Newscom-891271094375046/<br />
                                     Email : redaksi@sultra1news.com<br />
                                     Twitter : https://twitter.com/sultra1news<br />
-                                    Kontak Iklan : sultra1news@gmail.com – 0402 – 2811 – 930
+                                    Kontak Iklan : sultra1news@gmail.com – 0402 – 2811 – 930<br />
                                 </p>
                             </div>
                         </div>
@@ -239,10 +287,17 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames
-                                            lectus tempor da blandit gravida sodales Suscipit mauris pede for con
-                                            sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida
-                                            sodales Suscipit mauris pede for sectetuer.</p>
+                                        <p>
+                                            Sultra1News adalah Media Online (Siber) yang menyediakan berita dari
+                                            berbagai bagian terkhusus
+                                            provinsi Sulawesi Tenggara. Seperti pada moto Kami "Investigasi dalam
+                                            Berita", yang berarti
+                                            berita kami berasal dari investigasi berdasarkan fakta yang ada dan tidak
+                                            dibuat-buat.
+                                            kami bertekad untuk selalu menyediakan berita yang berkualitas sehingga para
+                                            pembaca akan lebih
+                                            merasa puas dengan apa yang kami sediakan.
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- social -->

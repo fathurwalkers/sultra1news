@@ -9,6 +9,7 @@ use App\Comment;
 use App\Kategori;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class HomeController extends Controller
 {
@@ -58,21 +59,35 @@ class HomeController extends Controller
     public function filterkategori(Request $request, Kategori $kategori, $kategorinama)
     {
         // dd($kategorinama);
+        // $match2 = \App\Article::where('id', $article->article_id)->latest()->paginate(6);
         $kategori2 = Kategori::all();
         $kategori3 = Kategori::all();
         $articles4 = Article::latest()->paginate(5);
         $match = ArticleKategori::where('kategori_id', $kategori->id)->get();
+        // foreach ($match as $article) {
+        //     while ($match3 = \App\Article::where('id', $article->article_id)->latest()->paginate(6)) {
+        //         $match2 = [$match3];
+        //     }
+        // }
         return view('showfilter', [
             'kategori2' => $kategori2,
             'match' => $match,
             'articles4' => $articles4,
             'kategori3' => $kategori3
+            // 'match2' => $match2
         ]);
     }
 
     public function redaksi()
     {
-        return view('redaksi');
+        $kategori = Kategori::all();
+        $kategori2 = Kategori::all();
+        $articles_4 = Article::latest()->paginate(4);
+        return view('redaksi', [
+            'kategori' => $kategori,
+            'articles_4' => $articles_4,
+            'kategori2' => $kategori2
+        ]);
     }
 
     public function hubungikami()

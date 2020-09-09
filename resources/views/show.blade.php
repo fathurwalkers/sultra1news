@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>News HTML-5 Template </title>
+    <title>{{ $articles->post_judul }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -335,10 +335,17 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suscipit mauris pede for con sectetuer sodales adipisci for cursus fames
-                                            lectus tempor da blandit gravida sodales Suscipit mauris pede for con
-                                            sectetuer sodales adipisci for cursus fames lectus tempor da blandit gravida
-                                            sodales Suscipit mauris pede for sectetuer.</p>
+                                        <p>
+                                            Sultra1News adalah Media Online (Siber) yang menyediakan berita dari
+                                            berbagai bagian terkhusus
+                                            provinsi Sulawesi Tenggara. Seperti pada moto Kami "Investigasi dalam
+                                            Berita", yang berarti
+                                            berita kami berasal dari investigasi berdasarkan fakta yang ada dan tidak
+                                            dibuat-buat.
+                                            kami bertekad untuk selalu menyediakan berita yang berkualitas sehingga para
+                                            pembaca akan lebih
+                                            merasa puas dengan apa yang kami sediakan.
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- social -->
