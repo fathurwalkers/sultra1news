@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // Home Route
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'AdminController@login');
