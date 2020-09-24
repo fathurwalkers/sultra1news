@@ -30,6 +30,5 @@ Route::prefix('/administrator')->group(function () {
     Route::get('/', 'AdminController@index')->name('allpost');
     Route::get('/create', 'AdminController@create')->name('create');
     Route::post('/logout', 'AdminController@logout');
-    // Route::get('/edit/{article}', 'PostController@edit');
     Route::get('/media', 'AdminController@media')->name('media');
 });

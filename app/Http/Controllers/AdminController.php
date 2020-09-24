@@ -18,7 +18,6 @@ class AdminController extends Controller
         if (!session('data_login')) {
             return redirect('/login');
         }
-        // Alert::success('hore', 'hore');
         $users = session('data_login');
         return view('admin.index', ['users' => $users]);
     }
